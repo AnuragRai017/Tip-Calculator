@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--Adding icon -->
+    <link rel="shortcut icon" href="calculator.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container"> <!--Main Container -->
+        <section>
+            <div class="wrapper"> <!-- sub-container  -->
+                <label for="bill"  class="out"> <!-- Labeling the bill  -->
+                    Bill              
+                </label>
+                <div class="input-box"> <!-- input for bill amount  -->
+                    <span>₹ </span>
+                    <input type="number" placeholder="Amount"  id="bill" class="out_put">
+                </div>
+            </div>
+            <div class="wrapper">    <!-- labeling for tip  -->
+                <span class="out">Tip</span>
+                <span id="tip-amount" class="out_put">
+                    ₹0
+                </span>
+            </div>
+            <hr>
+            <div class="wrapper">   <!-- Total amount paid  -->
+                <span class="out">Total Amount</span>
+                <span id="total-amount" class="out_put">
+                    ₹0
+                </span>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper"><!-- Tip in percent  -->
+                <label for="tip" class="out">
+                    Tip %
+                </label>
+                <span id="tip-percent" class="out_put">
+                    0
+                </span>
+            </div>
+            <input class="tip" type="number" min="1" id="tip" value="10"><!--starting tip value is 10 and minimum can be 1  -->
+            <div class="wrapper">
+                <label for="no-of-people" class="out"><!-- total number of people -->
+                    No. Of People
+                </label>
+                <span id="split-num" class="out_put">
+                    0
+                </span>
+            </div>
+            <input type="range" min="1" max="50" id="no-of-people" value="1"><!-- number of pepole maximum can be 30 and minimum can be 1  -->
+        </section>
+        <section>
+            <div class="wrapper">
+                <span class="out"><!-- calculated tip show per person  -->
+                    Tip 
+                    <h5>per person</h5>
+                </span>
+                <span id="tip-per-person" class="out_put">
+                    ₹ 0
+                </span>
+            </div>
+            <div class="wrapper">
+                <span class="out"><!--Total amount per person depends upon number of person totalAmount/no.ofpersons-->
+                    Total 
+                    <h5>per person</h5> 
+                </span>
+                <span id="total-per-person" class="out_put">
+                    ₹ 0
+                </span>
+                
+            </div>
+            <div class="result">
+            <h4 id="message"></h4>
+            <h4 id="message_1"></h4>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script><!--Linking JavaScript in last of body so that all the page load successfully then DOM Manupulation Start -->
+</body>
+</html>
